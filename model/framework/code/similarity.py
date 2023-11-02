@@ -53,7 +53,7 @@ def get_available_maps():
 
 def get_maps():
     data = get_available_maps()
-    labels = ["Wuxi-"]
+    labels = ["Wuxi"]
     found_maps = collections.defaultdict(list)
     for k, v in data.items():
         for l in labels:
