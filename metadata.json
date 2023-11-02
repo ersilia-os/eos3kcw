@@ -1,9 +1,9 @@
 {
-    "Identifier": "",
-    "Slug": "",
-    "Status": "",
-    "Title": "",
-    "Description": "",
+    "Identifier": "eos3kcw",
+    "Slug": "small-world-wuxi",
+    "Status": "In progress",
+    "Title": "Small World Wuxi search",
+    "Description": "Small World is an index of chemical space containing more than 230B molecular substructures. Here we use the Small World API to post a query to the SmallWorld server to sample 100 molecules within a distance of 10 for different the Wuxi map.",
     "Mode": "",
     "Task": [],
     "Input": [],
@@ -12,8 +12,10 @@
     "Output Type": [],
     "Output Shape": "",
     "Interpretation": "",
-    "Tag": [],
-    "Publication": "",
-    "Source Code": "",
-    "License": ""
+    "Tag": [
+        "Similarity"
+    ],
+    "Publication": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3606195/",
+    "Source Code": "https://pypi.org/project/smallworld-api/",
+    "License": "MIT"
 }
