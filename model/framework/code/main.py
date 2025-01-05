@@ -24,7 +24,7 @@ outputs = []
 for smiles in smiles_list:
     outputs += [sampler.sample(smiles)]
 
-header = ["sim-{0}".format(i) for i in range(100)]
+header = ["smiles_{0}".format(str(i).zfill(2)) for i in range(100)]
 blank = [None] * len(header)
 R = []
 for o in outputs:
