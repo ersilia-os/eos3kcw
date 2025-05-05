@@ -13,17 +13,19 @@ from smallworld_api import SmallWorld
 import warnings
 from rdkit import Chem
 from rdkit import DataStructs
-from rdkit.Chem import AllChem
+from rdkit.Chem import rdFingerprintGenerator
 
 warnings.filterwarnings("ignore")
 
 MAX_N_MOLECULES = 100
 
 
+
 def calculate_similarity(ref_mol, mol_list):
     # Calculate fingerprints for the reference molecule and molecule list
-    ref_fp = AllChem.GetMorganFingerprint(ref_mol, 2)
-    mol_fps = [AllChem.GetMorganFingerprint(mol, 2) for mol in mol_list]
+    generator = rdFingerprintGenerator.GetMorganGenerator(radius=2)
+    ref_fp = generator.GetFingerprint(ref_mol)
+    mol_fps = [generator.GetFingerprint(mol) for mol in mol_list]
 
     # Calculate similarity between reference and each molecule in the list
     similarities = [
