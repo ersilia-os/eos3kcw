@@ -3,33 +3,44 @@
     "Slug": "small-world-wuxi",
     "Status": "Ready",
     "Title": "Small World Wuxi search",
-    "Description": "Small World is an index of chemical space containing more than 230B molecular substructures. Here we use the Small World API to post a query to the SmallWorld server. We sample 100 molecules within a distance of 10 specifically for the Wuxi map, not the entire SmallWorld domain. Please check other small-world models available in our hub.",
+    "Description": "Small World is an index of chemical space containing more than 230B molecular substructures. Here we use the Small World API to post a query to the SmallWorld server. We sample 100 molecules within a distance of 10 specifically for the Wuxi map, not the entire SmallWorld domain. Please check other small-world models available in our hub.\n",
     "Source": "Online",
-    "Task": [
-        "Similarity"
-    ],
+    "Source Type": "External",
     "Input": [
         "Compound"
     ],
-    "Input Shape": "Single",
+    "Input Dimension": 1,
+    "Task": "Sampling",
+    "Subtask": "Similarity search",
+    "Biomedical Area": [
+        "Any"
+    ],
+    "Target Organism": [
+        "Not Applicable"
+    ],
     "Output": [
         "Compound"
     ],
-    "Output Type": [
-        "String"
-    ],
-    "Output Shape": "List",
+    "Output Dimension": 100,
+    "Output Consistency": "Fixed",
     "Interpretation": "List of 100 nearest neighbors",
     "Tag": [
         "Similarity"
     ],
     "Publication": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3606195/",
+    "Publication Type": "Peer reviewed",
+    "Publication Year": 2013,
     "Source Code": "https://pypi.org/project/smallworld-api/",
     "License": "MIT",
-    "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos3kcw.zip",
+    "Contributor": "miquelduranfrigola",
+    "Incorporation Date": "2023-11-02",
     "DockerHub": "https://hub.docker.com/r/ersiliaos/eos3kcw",
     "Docker Architecture": [
         "AMD64",
         "ARM64"
+    ],
+    "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos3kcw.zip",
+    "Deployment": [
+        "Local"
     ]
 }
