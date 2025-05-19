@@ -22,7 +22,7 @@
         "Compound"
     ],
     "Output Dimension": 100,
-    "Output Consistency": "Fixed",
+    "Output Consistency": "Variable",
     "Interpretation": "List of 100 nearest neighbors",
     "Tag": [
         "Similarity"
