@@ -37,13 +37,11 @@ def calculate_similarity(ref_mol, mol_list):
 
 def sort_molecules_by_similarity(ref_mol, mol_list, top_n=MAX_N_MOLECULES):
     similarities = calculate_similarity(ref_mol, mol_list)
-    # Pair each molecule with its similarity to the reference molecule
     paired = list(zip(mol_list, similarities))
-    # Sort by similarity (descending)
-    sorted_mols = sorted(paired, key=lambda x: x[1], reverse=True)
+    paired.sort(key=lambda x: (-x[1], Chem.MolToSmiles(x[0], canonical=True)))
+    sorted_mols = [mol for mol, sim in paired][:top_n]
+    return sorted_mols
 
-    # Return only the molecules (without the similarity values), limited to top_n
-    return [mol for mol, sim in sorted_mols][:top_n]
 
 
 def get_available_maps():
