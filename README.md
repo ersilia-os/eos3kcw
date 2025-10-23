@@ -2,8 +2,7 @@
 
 Small World is an index of chemical space containing more than 230B molecular substructures. Here we use the Small World API to post a query to the SmallWorld server. We sample 100 molecules within a distance of 10 specifically for the Wuxi map, not the entire SmallWorld domain. Please check other small-world models available in our hub.
 
-This model was incorporated on 2023-11-02.
-
+This model was incorporated on 2023-11-02.Last packaged on 2025-10-23.
 
 ## Information
 ### Identifiers
@@ -45,17 +44,17 @@ _10 of 100 columns are shown_
 - **Source:** `Online`
 - **Source Type:** `External`
 - **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos3kcw](https://hub.docker.com/r/ersiliaos/eos3kcw)
-- **Docker Architecture:** `AMD64`, `ARM64`
+- **Docker Architecture:** `AMD64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos3kcw.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos3kcw.zip)
 
 ### Resource Consumption
 - **Model Size (Mb):** `1`
 - **Environment Size (Mb):** `584`
-- **Image Size (Mb):** `501.21`
+- **Image Size (Mb):** `524.73`
 
 **Computational Performance (seconds):**
-- 10 inputs: `81.2`
-- 100 inputs: `-1`
+- 10 inputs: `60.42`
+- 100 inputs: `1764.75`
 - 10000 inputs: `-1`
 
 ### References
