@@ -44,11 +44,19 @@ def sort_molecules_by_similarity(ref_mol, mol_list, top_n=MAX_N_MOLECULES):
 
 
 
-def get_available_maps():
+def get_available_maps(retries=10, delay=2):
     url = "https://sw.docking.org/search/maps"
-    response = urllib.request.urlopen(url)
-    data = json.loads(response.read())
-    return data
+    for i in range(retries):
+        try:
+            req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+            with urllib.request.urlopen(req) as response:
+                return json.loads(response.read())
+        except (urllib.error.URLError, ConnectionResetError) as e:
+            if i < retries - 1:
+                time.sleep(delay)
+                continue
+            else:
+                raise e
 
 
 def get_maps():
@@ -93,7 +101,10 @@ def get_maps():
 class SmallWorldSampler(object):
     def __init__(self, dist=10, length=100):
         self.maps = get_maps()
-        self.sw = SmallWorld()
+        try:
+            self.sw = SmallWorld(update_dbs=True)
+        except Exception:
+            self.sw = SmallWorld(update_dbs=False)
         self.dist = dist
         self.length = length
 
