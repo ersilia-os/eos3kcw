@@ -59,7 +59,7 @@ _10 of 100 columns are shown_
 
 ### References
 - **Source Code**: [https://pypi.org/project/smallworld-api/](https://pypi.org/project/smallworld-api/)
-- **Publication**: [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3606195/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3606195/)
+- **Publication**: [https://doi.org/10.1186/1758-2946-5-S1-O15](https://doi.org/10.1186/1758-2946-5-S1-O15)
 - **Publication Type:** `Peer reviewed`
 - **Publication Year:** `2013`
 - **Ersilia Contributor:** [miquelduranfrigola](https://github.com/miquelduranfrigola)
