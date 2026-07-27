@@ -8,7 +8,6 @@ import collections
 import urllib.request
 import json
 import time
-import pandas as pd
 from smallworld_api import SmallWorld
 import warnings
 from rdkit import Chem
@@ -108,18 +107,30 @@ class SmallWorldSampler(object):
         self.dist = dist
         self.length = length
 
-    def _sample(self, smiles, time_budget_sec=360):
+    def _sample(
+        self,
+        smiles,
+        time_budget_sec=360,
+        max_retries=10,
+        retry_delay=2,
+        max_retry_delay=30,
+    ):
         t0 = time.time()
         sampled_smiles = []
         for m in self.maps:
-            try:
-                db_name = m[1]
-                results: pd.DataFrame = self.sw.search(
-                    smiles, dist=self.dist, db=db_name, length=self.length
-                )
-            except:
-                print(smiles, m, "did not work...")
-                results = None
+            db_name = m[1]
+            results = None
+            for attempt in range(max_retries):
+                try:
+                    results = self.sw.search(
+                        smiles, dist=self.dist, db=db_name, length=self.length
+                    )
+                    break
+                except Exception as e:
+                    print(smiles, m, f"attempt {attempt + 1}/{max_retries} failed: {e}")
+                    if attempt < max_retries - 1:
+                        delay = min(retry_delay * (2**attempt), max_retry_delay)
+                        time.sleep(delay)
             if results is not None:
                 sampled_smiles += list(results["smiles"])
             t1 = time.time()
