@@ -28,16 +28,16 @@ This model was incorporated on 2023-11-02.Last packaged on 2026-07-27.
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
 |------|------|-----------|-------------|
-| smiles_00 | string |  | Similar compound index 0 queried using SmallWorld on the Wuxi chemical space |
-| smiles_01 | string |  | Similar compound index 1 queried using SmallWorld on the Wuxi chemical space |
-| smiles_02 | string |  | Similar compound index 2 queried using SmallWorld on the Wuxi chemical space |
-| smiles_03 | string |  | Similar compound index 3 queried using SmallWorld on the Wuxi chemical space |
-| smiles_04 | string |  | Similar compound index 4 queried using SmallWorld on the Wuxi chemical space |
-| smiles_05 | string |  | Similar compound index 5 queried using SmallWorld on the Wuxi chemical space |
-| smiles_06 | string |  | Similar compound index 6 queried using SmallWorld on the Wuxi chemical space |
-| smiles_07 | string |  | Similar compound index 7 queried using SmallWorld on the Wuxi chemical space |
-| smiles_08 | string |  | Similar compound index 8 queried using SmallWorld on the Wuxi chemical space |
-| smiles_09 | string |  | Similar compound index 9 queried using SmallWorld on the Wuxi chemical space |
+| smi_00 | string |  | Similar compound index 0 queried using SmallWorld on the Wuxi chemical space |
+| smi_01 | string |  | Similar compound index 1 queried using SmallWorld on the Wuxi chemical space |
+| smi_02 | string |  | Similar compound index 2 queried using SmallWorld on the Wuxi chemical space |
+| smi_03 | string |  | Similar compound index 3 queried using SmallWorld on the Wuxi chemical space |
+| smi_04 | string |  | Similar compound index 4 queried using SmallWorld on the Wuxi chemical space |
+| smi_05 | string |  | Similar compound index 5 queried using SmallWorld on the Wuxi chemical space |
+| smi_06 | string |  | Similar compound index 6 queried using SmallWorld on the Wuxi chemical space |
+| smi_07 | string |  | Similar compound index 7 queried using SmallWorld on the Wuxi chemical space |
+| smi_08 | string |  | Similar compound index 8 queried using SmallWorld on the Wuxi chemical space |
+| smi_09 | string |  | Similar compound index 9 queried using SmallWorld on the Wuxi chemical space |
 
 _10 of 100 columns are shown_
 ### Source and Deployment
