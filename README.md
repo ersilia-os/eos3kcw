@@ -1,6 +1,6 @@
 # Small World Wuxi search
 
-Small World is an index of chemical space containing more than 230B molecular substructures. Here we use the Small World API to post a query to the SmallWorld server. We sample 100 molecules within a distance of 10 specifically for the Wuxi map, not the entire SmallWorld domain. Please check other small-world models available in our hub.
+Returns up to 100 near neighbours of a query molecule from the WuXi collection, drawing on SmallWorld, an index spanning more than 230 billion molecular substructures. Sayle and colleagues built it around the exact size of the maximum common edge subgraph rather than fingerprint overlap, precomputing the index so neighbours can be retrieved from databases of millions of compounds in seconds. The search is capped at a graph-edit distance of 10 and runs on an external server, so results follow whichever version of the library is indexed at the time.
 
 This model was incorporated on 2023-11-02.Last packaged on 2026-09-14.
 
@@ -23,7 +23,7 @@ This model was incorporated on 2023-11-02.Last packaged on 2026-09-14.
 ### Output
 - **Output Dimension:** `100`
 - **Output Consistency:** `Variable`
-- **Interpretation:** List of 100 nearest neighbors
+- **Interpretation:** Up to 100 structural neighbours of the query molecule retrieved from the WuXi chemical library.
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
