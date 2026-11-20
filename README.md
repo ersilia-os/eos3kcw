@@ -2,7 +2,8 @@
 
 Returns up to 100 near neighbours of a query molecule from the WuXi collection, drawing on SmallWorld, an index spanning more than 230 billion molecular substructures. Sayle and colleagues built it around the exact size of the maximum common edge subgraph rather than fingerprint overlap, precomputing the index so neighbours can be retrieved from databases of millions of compounds in seconds. The search is capped at a graph-edit distance of 10 and runs on an external server, so results follow whichever version of the library is indexed at the time.
 
-This model was incorporated on 2023-11-02.Last packaged on 2026-09-14.
+This model was incorporated on 2023-11-02.
+Last packaged on 2026-09-14.
 
 ## Information
 ### Identifiers
@@ -46,6 +47,7 @@ _10 of 100 columns are shown_
 - **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos3kcw](https://hub.docker.com/r/ersiliaos/eos3kcw)
 - **Docker Architecture:** `AMD64`, `ARM64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos3kcw.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos3kcw.zip)
+- **Apptainer**: [https://models-sif.s3.eu-north-1.amazonaws.com/eos3kcw_v2.sif](https://models-sif.s3.eu-north-1.amazonaws.com/eos3kcw_v2.sif)
 
 ### Resource Consumption
 - **Model Size (Mb):** `1`
